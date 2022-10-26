@@ -125,6 +125,7 @@ header {
 
 .menu {
     position: fixed;
+    z-index: 10;
     top: 30px;
     right: 30px;
     background-color: aliceblue;
@@ -146,7 +147,7 @@ header {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    /* transition: transform .3s ease-in-out;*/
+    transition: transform .3s ease-in-out;
     transform: translate(100%);
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
 }
@@ -155,9 +156,11 @@ header {
     transform: translate(0);
 }
 
-.menuNavegacionA {
+.menuNavegacion a {
     color: aliceblue;
     text-decoration: none;
+    font-family: Especial;
+    font-size: x-large;
 }
 
 
@@ -408,83 +411,83 @@ footer {
         width: 80%;
     }
 
-    .cosas{
+    .cosas {
         margin-bottom: 30px;
     }
 
-    .agregarImagen{
+    .agregarImagen {
         width: 80%;
     }
 
-    .imgGaleria{
+    .imgGaleria {
         width: 45%;
 
     }
 
-    .contCosas{
+    .contCosas {
         width: 80%;
     }
 
-    .footerContent{
+    .footerContent {
         justify-content: center;
     }
-    
-    .socialMedia{
+
+    .socialMedia {
         width: 80%;
         justify-content: space-evenly;
     }
 
-    .socialMediaIcon{
+    .socialMediaIcon {
         margin-left: 0;
     }
 
-    .socialMedia i{
+    .socialMedia i {
         margin-left: 0;
     }
 
-    .contactUs{
+    .contactUs {
         text-align: center;
         width: 80%;
         margin-bottom: 40px;
     }
 }
 
-@media  screen and (max-width: 500px) {
+@media screen and (max-width: 500px) {
 
-    .menuNavegacion{
+    .menuNavegacion {
         width: 65vw;
     }
 
-    .menu{
+    .menu {
         top: 20px;
         right: 20px;
     }
 
-    .titulo{
+    .titulo {
         font-size: 30px;
     }
 
-    .subtitulo{
+    .subtitulo {
         font-size: 30px;
     }
 
-    .agregarImagen{
+    .agregarImagen {
         width: 95%;
     }
 
-    .imgGaleria{
+    .imgGaleria {
         width: 95%;
     }
 
-    .agregarImagen{
+    .agregarImagen {
         width: 95%;
     }
 
-    .socialMedia{
+    .socialMedia {
         width: 100%;
     }
 
-    .contactUs{
+    .contactUs {
         width: 90%;
     }
 }
