@@ -128,7 +128,7 @@ header {
     z-index: 10;
     top: 30px;
     right: 30px;
-    background-color: aliceblue;
+    background-color: rgba(255, 255, 255, 0.815);
     width: 40px;
     height: 40px;
     cursor: pointer;
@@ -249,7 +249,7 @@ header {
     width: 30%;
     display: block;
     margin-bottom: 15px;
-    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.637);
     cursor: pointer;
 }
 
@@ -268,12 +268,16 @@ header {
 
 }
 
+.show{
+    transform: translate(0);
+}
+
 .agregarImagen {
     object-fit: cover;
     width: 60%;
     border-radius: 10px;
     transform: scale(0);
-    transition: .3s .2s;
+    transition: transform .3s .2s;
 }
 
 .showImage {
@@ -287,6 +291,7 @@ header {
     right: 15px;
     width: 40px;
     cursor: pointer;
+    background-image: #fff;
 
 }
 
