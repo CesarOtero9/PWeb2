@@ -1,0 +1,173 @@
+/* Fuentes */
+@font-face {
+    font-family: Especial;
+    src: url(../Fonts/BebasNeue-Regular.ttf);
+}
+
+@font-face {
+    font-family: Titulo;
+    src: url(../Fonts/HoneyMints.ttf);
+}
+
+@font-face {
+    font-family: Subtitulo;
+    src: url(../Fonts/CaviarDreams_Italic.ttf);
+}
+
+
+/* -----------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    scroll-behavior: smooth;
+}
+
+/* TITULO PRINCIPAL */
+
+.titulo {
+    margin: 1px 5px;
+    text-align: center;
+    display: inline-block;
+    transition: .5s;
+    padding: 20px 0;
+    margin: 1px 0;
+    overflow: hidden;
+    
+    
+}
+
+.titulo span{
+    background-color: aliceblue;
+    width: 100px;
+    height: 100px;
+    display: block;
+    line-height: 100px;
+    font-family: Titulo;
+    font-weight: bolder;
+    color: rgb(49, 180, 180);
+    font-size: 50px;
+    float: left;
+    transition: .5s;
+   
+}
+
+.titulo span:nth-child(1){
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.titulo span:nth-child(1){
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.titulo:hover span:nth-child(odd){
+    transform: skewY(-15deg);
+    color: #c72261;
+    box-shadow: 0 60px 20px rgba(0, 0, 0, .1);
+}
+
+.titulo:hover span:nth-child(even){
+    transform: skewY(-15deg);
+    color: #c72261;
+    box-shadow: 0 60px 20px rgba(0, 0, 0, .1), inset 0px 0 30px rgba(0, 0, 0, .2);
+}
+
+.titulo:hover{
+    transform: rotateX('350')
+}
+
+
+/* Fin Titulo */
+
+
+body {
+    font-family: tituloPrincipal;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: auto;
+    padding: 60px 0;
+}
+
+header {
+    height: 100vh;
+    background-image: linear-gradient(to right, rgba(255, 128, 119, 0.664) 0%, rgba(255, 133, 122, 0.603) 0%, rgba(255, 140, 127, 0.671) 21%, rgba(249, 144, 133, 0.671) 52%, rgba(207, 85, 107, 0.671) 78%, rgba(177, 42, 91, 0.658) 100%), url(../Images/fondoPrincipal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    align-items: center;
+
+}
+
+.head {
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    background-color: aliceblue;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(10, 60, 66, 0.678);
+}
+
+.menuNavegacion {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30vw;
+    height: 100%;
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+   /* transition: transform .3s ease-in-out;*/
+    transform: translate(110%);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.spread{
+    transform: translate(0);
+}
+
+.menuNavegacionA{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+
+.copy{
+    color: azure;
+    font-weight: 300;
+    font-size: 25px;
+}
+
+/*Nuestras Heramientas */
+
+.subtitulo{
+    text-align: center;
+    font-weight: 300;
+    color: blueviolet;
+    margin-bottom: 40px;
+    font-size: 40px;
+    font-family: Subtitulo;
+}
