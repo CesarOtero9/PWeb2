@@ -321,7 +321,7 @@ footer {
     padding-bottom: 0.1px;
 }
 
-.footerContent {
+. {
     display: flex;
     justify-content: space-between;
     align-items: center;
