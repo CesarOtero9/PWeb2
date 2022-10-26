@@ -114,6 +114,7 @@ header {
 }
 
 .head {
+    text-align: center;
     padding: 0;
     height: 100%;
     display: flex;
@@ -146,7 +147,7 @@ header {
     justify-content: space-evenly;
     align-items: center;
     /* transition: transform .3s ease-in-out;*/
-    transform: translate(110%);
+    transform: translate(100%);
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
@@ -189,7 +190,7 @@ header {
 }
 
 .contenedorHerramienta img {
-    width: 15%;
+    width: 40%;
     padding-bottom: 1%;
     margin-bottom: 5%;
 }
@@ -241,6 +242,7 @@ header {
 }
 
 .imgGaleria {
+    object-fit: cover;
     width: 30%;
     display: block;
     margin-bottom: 15px;
@@ -264,6 +266,7 @@ header {
 }
 
 .agregarImagen {
+    object-fit: cover;
     width: 60%;
     border-radius: 10px;
     transform: scale(0);
@@ -271,6 +274,7 @@ header {
 }
 
 .showImage {
+
     transform: scale(1);
 }
 
@@ -321,7 +325,7 @@ footer {
     padding-bottom: 0.1px;
 }
 
-. {
+.footerContent {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -330,27 +334,29 @@ footer {
     padding-bottom: 40px;
 }
 
-.contactUS {
+.contactUs {
     width: 40%;
     color: azure;
 }
 
-.brand{
+.brand {
     font-weight: 500;
     font-size: 40px;
+    color: #fff;
 }
 
-.brand+p{
+.brand+p {
     font-weight: 500;
+    color: antiquewhite;
 }
 
-.socialMedia{
+.socialMedia {
     width: 50%;
     display: flex;
     justify-content: flex-end;
 }
 
-.socialMediaIcon{
+.socialMediaIcon {
     display: inline-block;
     margin-left: 20px;
     width: 60px;
@@ -361,21 +367,123 @@ footer {
     color: #fff;
 }
 
-.SocialMediaIcon:hover{
+.SocialMediaIcon:hover {
     background: #fff;
     color: #b490ca;
 }
 
-.socialMediaIcon i{
+.socialMediaIcon i {
     font-size: 30px;
     line-height: 60px;
 }
 
-.line{
+.line {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     height: 2px;
     background: #fff;
     margin-bottom: 60px;
+}
+
+/* ---------------------------------------------- */
+
+
+@media screen and (max-width:800px) {
+    .menuNavegacion {
+        width: 50vw;
+    }
+
+    .titulo {
+        font-size: 40px;
+    }
+
+    .contenedorHerramienta img {
+        width: 80%;
+        margin-bottom: 40px;
+    }
+
+    .checklistHerramienta {
+        width: 80%;
+    }
+
+    .cosas{
+        margin-bottom: 30px;
+    }
+
+    .agregarImagen{
+        width: 80%;
+    }
+
+    .imgGaleria{
+        width: 45%;
+
+    }
+
+    .contCosas{
+        width: 80%;
+    }
+
+    .footerContent{
+        justify-content: center;
+    }
+    
+    .socialMedia{
+        width: 80%;
+        justify-content: space-evenly;
+    }
+
+    .socialMediaIcon{
+        margin-left: 0;
+    }
+
+    .socialMedia i{
+        margin-left: 0;
+    }
+
+    .contactUs{
+        text-align: center;
+        width: 80%;
+        margin-bottom: 40px;
+    }
+}
+
+@media  screen and (max-width: 500px) {
+
+    .menuNavegacion{
+        width: 65vw;
+    }
+
+    .menu{
+        top: 20px;
+        right: 20px;
+    }
+
+    .titulo{
+        font-size: 30px;
+    }
+
+    .subtitulo{
+        font-size: 30px;
+    }
+
+    .agregarImagen{
+        width: 95%;
+    }
+
+    .imgGaleria{
+        width: 95%;
+    }
+
+    .agregarImagen{
+        width: 95%;
+    }
+
+    .socialMedia{
+        width: 100%;
+    }
+
+    .contactUs{
+        width: 90%;
+    }
 }
