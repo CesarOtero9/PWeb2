@@ -203,7 +203,7 @@ input:focus~.barra::before {
 
 	header {
 		width: 80% auto;
-		height: 33%;
+		height: 35%;
 
 	}
 
@@ -230,6 +230,7 @@ input:focus~.barra::before {
 		margin-bottom: 0%;
 		font-size: 15px;
 	}
+
 
 	
 
