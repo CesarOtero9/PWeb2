@@ -236,7 +236,7 @@ input:focus~.barra::before {
 	}
 
 	.regLetra {
-		font-size: 30px;
+		font-size: 25px;
 	}
 
 }
