@@ -1,16 +1,16 @@
 /*Comportamiento General*/
 
-:root{
-    scroll-behavior: smooth;
+:root {
+	scroll-behavior: smooth;
 	background-image: linear-gradient(60deg, #64b3f491 0%, #eca66494 100%);
 	--colorTextosF: rgba(7, 112, 116, 0.459);
 }
 
 /* Fuentes */
 
-@font-face{
-    font-family: TituloPrincipal;
-    src: url(../Fuentes/HoneyMints.ttf);
+@font-face {
+	font-family: TituloPrincipal;
+	src: url(../Fuentes/HoneyMints.ttf);
 }
 
 @font-face {
@@ -22,14 +22,22 @@
 	font-family: TextoPrincipal;
 	src: url(../Fuentes/CaviarDreams_Bold.ttf);
 }
+
 /*header*/
 
 
 *,
 ::before,
-::after
-{padding: 0; margin: 0; box-sizing: border-box;}
-body{height: 900px;}
+::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 900px;
+}
+
 header {
 	background: url('../Imagenes/salud.jpg');
 	text-align: center;
@@ -42,7 +50,7 @@ header {
 	border-radius: 0 0 85% 85% / 30%;
 }
 
-.overlay{
+.overlay {
 	width: 100%;
 	height: 100%;
 	padding: 50px;
@@ -50,14 +58,15 @@ header {
 	background-image: linear-gradient(to right, #2439498e 0%, #517fa49d 100%);
 }
 
-.tituloP{
+.tituloP {
 	font-family: 'TituloPrincipal';
 	font-size: 80px;
 	margin-bottom: 30px;
 }
 
-h3, p {
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+h3,
+p {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	margin-bottom: 30px;
 	font-size: 20px;
 }
@@ -74,30 +83,30 @@ button {
 	font-family: TituloFormulario;
 }
 
-button:hover{
+button:hover {
 	cursor: pointer;
 }
 
 /* Formulario */
 
-.formularioIMC{
+.formularioIMC {
 	display: flex;
 	align-items: center;
 	width: 33%;
 	justify-content: center;
 	margin: 40px auto;
-	
-	
+
+
 }
 
-.regLetra{
+.regLetra {
 	text-align: center;
 	font-family: TextoPrincipal;
 	font-weight: 700;
 	color: rgba(13, 79, 83, 0.801);
 }
 
-form{
+form {
 	background: #FFF;
 	padding: 40px auto;
 	box-shadow: 0 0 6px 0 rgba(255, 255, 255, .8);
@@ -105,20 +114,20 @@ form{
 	margin-bottom: 50px;
 }
 
-.form{
+.form {
 	width: 100%;
 	margin: 40px auto;
 
 }
 
-form .grupo{
+form .grupo {
 	position: relative;
 	margin: 45px;
-	
-	
+
+
 }
 
-input{
+input {
 	background: none;
 	color: #c6c6c6;
 	font-size: 18px;
@@ -130,12 +139,12 @@ input{
 	font-family: TextoPrincipal;
 }
 
-input:focus{
+input:focus {
 	outline: none;
 	color: rgb(33, 136, 114);
 }
 
-label{
+label {
 	color: var(--colorTextosF);
 	font-size: 16px;
 	position: absolute;
@@ -147,19 +156,19 @@ label{
 }
 
 input:focus~label,
-input:valid~label{
+input:valid~label {
 	top: -14px;
 	font-size: 12px;
 	color: #2196f3;
 }
 
-.barra{
+.barra {
 	position: relative;
 	display: block;
 	width: 100%;
 }
 
-.barra::before{
+.barra::before {
 	content: "";
 	height: 2px;
 	width: 0%;
@@ -170,11 +179,11 @@ input:valid~label{
 	left: 0;
 }
 
-input:focus~.barra::before{
- width: 100%;
+input:focus~.barra::before {
+	width: 100%;
 }
 
-.calcular{
+.calcular {
 	font-family: TituloFormulario;
 	background-color: #ca994fdc;
 	background-image: linear-gradient(60deg, #64b3f491 0%, #eca66494 100%);
@@ -188,26 +197,41 @@ input:focus~.barra::before{
 }
 
 @media screen and (max-width: 768px) {
-	form{
+	form {
 		width: 80%;
 	}
 
-	header{
+	header {
 		width: 80% auto;
+		height: 33%;
+
 	}
 
-	.tituloP{
+	.overlay {
+		width: 100%;
+		height: 100%;
+		padding: 25px;
+
+	}
+
+	.tituloP {
 		font-size: 60px;
 		margin-top: 2px;
-		margin-bottom: 20px;
+		margin-bottom: 15px;
 	}
 
-	h3, p {
-			margin-bottom: 30px;
-			font-size: 15px;
-		}
-
+	h3{
+		margin-bottom: 30px;
+		font-size: 15px;
 	}
 
+	p{
+		padding-bottom: 0%;
+		margin-bottom: 0%;
+		font-size: 15px;
+	}
+
+	
 
 
+}
