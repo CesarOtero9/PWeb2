@@ -187,7 +187,7 @@ input:focus~.barra::before{
 	font-size: 16px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
 	form{
 		width: 80%;
 	}
@@ -198,6 +198,8 @@ input:focus~.barra::before{
 
 	.tituloP{
 		font-size: 60px;
+		margin-top: 2px;
+		margin-bottom: 20px;
 	}
 
 	h3, p {
@@ -205,26 +207,7 @@ input:focus~.barra::before{
 			font-size: 15px;
 		}
 
-}
-
-@media screen and (max-width: 1023px) {
-	form{
-		width: 80%;
 	}
 
-	header{
-		width: 80% auto;
-	}
-
-	.tituloP{
-		font-size: 60px;
-	}
-
-	h3, p {
-			margin-bottom: 30px;
-			font-size: 15px;
-		}
-
-}
 
 
