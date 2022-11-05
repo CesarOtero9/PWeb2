@@ -398,12 +398,20 @@ footer {
 
 
 @media screen and (max-width:800px) {
-    .menuNavegacion {
-        width: 50vw;
-    }
 
     .titulo {
-        font-size: 40px;
+
+        font-size: 1px;
+        
+    }
+
+    .head{
+align-items: center;
+padding-top: 5px;
+    }
+
+    .menuNavegacion {
+        width: 50vw;
     }
 
     .contenedorHerramienta img {
