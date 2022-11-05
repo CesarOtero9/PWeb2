@@ -245,15 +245,22 @@ input:focus~.barra::before {
 
 .modal>img {
 	height: 50%;
+	margin: 1px;
 }
 
 .modalTextos{
 	font-family: TextoPrincipal;
 	font-size: 20px;
-	color: #333;
+	color: rgba(8, 56, 56, 0.5);
 	width: 70%;
-	margin: 40px auto;
+	margin: 1px auto;
 	text-align: center;
+
+}
+
+.textoF{
+	margin: 1px auto;
+	padding: 1px auto;
 }
 
 @media screen and (max-width: 768px) {
@@ -285,7 +292,7 @@ input:focus~.barra::before {
 	p {
 		padding-bottom: 0%;
 		margin-bottom: 0%;
-		font-size: 15px;
+		font-size: 12px;
 	}
 
 	form {
