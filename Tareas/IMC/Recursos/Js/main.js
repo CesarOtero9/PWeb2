@@ -3,11 +3,6 @@ let abrir = document.querySelector(".calcular");
 let modal = document.querySelectorAll(".modal")[0];
 let modalC = document.querySelectorAll(".modalCont")[0];
 
-console.log (cerrar);
-console.log (abrir);
-console.log (modal);
-console.log (modalC);
-
 abrir.addEventListener("click", function(e){
     e.preventDefault();
     modalC.style.opacity = "1";

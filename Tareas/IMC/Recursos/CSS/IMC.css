@@ -247,6 +247,15 @@ input:focus~.barra::before {
 	height: 50%;
 }
 
+.modalTextos{
+	font-family: TextoPrincipal;
+	font-size: 20px;
+	color: #333;
+	width: 70%;
+	margin: 40px auto;
+	text-align: center;
+}
+
 @media screen and (max-width: 768px) {
 
 	header {
@@ -257,7 +266,7 @@ input:focus~.barra::before {
 
 	.overlay {
 		width: 100%;
-		height: 100%;
+		height: 100%;s
 		padding: 25px;
 
 	}
