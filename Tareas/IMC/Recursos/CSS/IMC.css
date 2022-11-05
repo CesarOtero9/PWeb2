@@ -279,9 +279,10 @@ input:focus~.barra::before {
 	}
 
 	.tituloP {
-		font-size: 60px;
-		margin-top: 2px;
+		font-size: 50px;
+		margin-top: 1px;
 		margin-bottom: 15px;
+		padding-top: 1px;
 	}
 
 	h3 {
