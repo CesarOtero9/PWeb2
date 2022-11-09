@@ -263,6 +263,14 @@ input:focus~.barra::before {
 	padding: 1px auto;
 }
 
+.warnings{
+	width: 200px;
+	text-align: center;
+	margin: auto;
+	color: #B06AB3;
+	padding-top: 20px;
+}
+
 @media screen and (max-width: 768px) {
 
 	header {

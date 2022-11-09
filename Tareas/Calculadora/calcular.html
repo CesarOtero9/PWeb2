@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="icon" href="../Calculadora/Images/iconoCalculadora.png">
+    <link rel="stylesheet" href="../Calculadora/calcular.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="twinkling"></div>
+    <header>
+        <h1>CALCULADORA</h1>
+        <h3>BÁSICA</h3>
+        <hr />
+        <p>
+            "Suma, resta...
+            divide, multiplica.
+            y saca el factorial."
+        </p>
+    </header>
+    <section>
+        <div class="calculator">
+            <div class="result-bar">
+                <span id="Result"></span>
+            </div>
+
+            <input class="operator-out" type="button" value="C" id="Delete">
+
+            <div class="controlls">
+                
+                <input class="number" type="button" value="7" id="seven">
+                <input class="number" type="button" value="8" id="eight">
+                <input class="number" type="button" value="9" id="nine">
+                <input class="operator" type="button" value="/" id="divide">
+                <input class="number" type="button" value="4" id="four">
+                <input class="number" type="button" value="5" id="five">
+                <input class="number" type="button" value="6" id="six">
+                <input class="operator" type="button" value="*" id="multiply">
+                <input class="number" type="button" value="1" id="one">
+                <input class="number" type="button" value="2" id="two">
+                <input class="number" type="button" value="3" id="three">
+                <input class="operator" type="button" value="-" id="minus">
+                <input class="result" type="button" value="=" id="equal">
+                <input class="number" type="button" value="0" id="cero">
+                <input class="number" type="button" value="." id="coma">
+                <input class="operator" type="button" value="+" id="plus">
+                <input class="operator" type="button" value="!" id="factorial" style="grid-column: 1/5;">
+
+            </div>
+        </div>
+    </section>
+
+    <script src="../Calculadora/calcular.js"></script>
+
+</body>
+
+</html>

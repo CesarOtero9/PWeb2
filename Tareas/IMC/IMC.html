@@ -21,7 +21,9 @@
                 persona. Para la mayoría de las personas, el IMC es un indicador confiable de la gordura y se usa para
                 identificar las categorías de peso que pueden llevar a problemas de salud.</p>
             <br>
-            <button style="color: black;" href="https://www.gob.mx/issste/articulos/que-es-el-indice-de-masa-corporal?idiom=es">READ MORE</button>
+            <button style="color: black;">
+            <a href="https://www.gob.mx/issste/articulos/que-es-el-indice-de-masa-corporal?idiom=es">Saber Más...</a>
+            </button>
         </div>
     </header>
     <div class="formularioIMC">
@@ -49,7 +51,8 @@
                     <label for="Peso">Peso</label>
                 </div>
                 <div>
-                    <button type="submit" class="calcular" onclick="calcIMC()">Calcular IMC</button>
+                    <button type="submit" class="calcular" onclick="calcIMC()">Calcular IMC </button>
+                    <p class="warnings" id="warnings"></p>
                 </div>
             </div>
         </form>
@@ -67,6 +70,7 @@
 
     <script src="../IMC/Recursos/Js/main.js"></script>
     <script src="../IMC/Recursos/Js/calculo.js"></script>
+    <script src="../IMC/Recursos/Js/warnings.js"></script>
 
 
 </body>
