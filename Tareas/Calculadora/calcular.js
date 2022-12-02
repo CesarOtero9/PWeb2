@@ -1,88 +1,122 @@
-function takeValue(x) {
-    console.log("Hhoifsd")
-    console.log(x)
-	document.getElementById('Result').innerHTML += x;
+const botonNumero = document.querySelectorAll('[data-numero]')
+const botonOperador = document.querySelectorAll('[data-operador]')
+const botonIgual = document.querySelector('[data-igual]')
+const botonBorrarTodo = document.querySelector('[data-borrar-todo]')
+const botonBorrar = document.querySelector('[data-borrar]')
+const textoValorSuperior = document.querySelector('[data-valor-superior]')
+const textoValorInferior = document.querySelector('[data-valor-inferior]')
+
+
+class Calculadora {
+	constructor(textoValorInferior, textoValorSuperior) {
+		this.textoValorInferior = textoValorInferior
+		this.textoValorSuperior = textoValorSuperior
+		this.valorInferior = ''
+		this.valorSuperior = ''
+		this.operador = undefined
+	}
+
+	agregarNumero(numero) {
+		if (numero === '.' && this.valorInferior.includes('.')) return
+		this.valorInferior = this.valorInferior + numero
+	}
+	imprimirDisplay() {
+		this.textoValorInferior.innerText = this.valorInferior
+		this.textoValorSuperior.innerText = this.valorSuperior
+	}
+	borrar() {
+		this.valorInferior = this.valorInferior.slice(0, -1)
+	}
+	elegirOperacion(operador) {
+		let op = operador 
+		if (op == '!'){
+			this.valorInferior = this.factorial()
+		}
+		this.operador = operador
+		this.valorSuperior = this.valorInferior
+		this.valorInferior = ''
+	}
+
+	factorial() {
+		let x = parseInt(this.valorInferior)
+		let res = 1;
+
+		if(x == 0){
+			return 1;
+		}else{
+			for(let i = 1; i <= x; i++){
+				res *= i;
+			}
+			return res;
+		}
+	}
+
+	realizarCalculo() {
+		let resultado
+		let conversionValorSuperior = parseFloat(this.valorSuperior)
+		let conversionValorInferior = parseFloat(this.valorInferior)
+		if (isNaN(conversionValorSuperior) || isNaN(conversionValorInferior)) return
+		switch (this.operador) {
+			case '+':
+				resultado = conversionValorSuperior + conversionValorInferior
+				break
+			case '-':
+				resultado = conversionValorSuperior - conversionValorInferior
+				break
+			case '*':
+				resultado = conversionValorSuperior * conversionValorInferior
+				break
+			case '÷':
+				resultado = conversionValorSuperior / conversionValorInferior
+				break
+			
+			default: return
+		}
+
+		this.valorInferior = resultado
+		this.operador = undefined
+		this.valorSuperior = ''
+	}
+
+	limpiarPantalla() {
+		this.valorInferior = ''
+		this.valorSuperior = ''
+		this.operador = undefined
+
+	}
 }
 
-function clearInput() {
-	document.getElementById('Result').innerHTML = "";
-}
-
-function calculateResult() {
-	var result = eval(document.getElementById('Result').innerHTML);
-	document.getElementById('Result').innerHTML = result;
-}
 
 
-var cero = document.getElementById('cero');
-var one = document.getElementById('one');
-var two = document.getElementById('two');
-var three = document.getElementById('three');
-var four = document.getElementById('four');
-var five = document.getElementById('five');
-var six = document.getElementById('six');
-var seven = document.getElementById('seven');
-var eight = document.getElementById('eight');
-var nine = document.getElementById('nine');
-
-var plus = document.getElementById('plus');
-var minus = document.getElementById('minus');
-var divide = document.getElementById('divide');
-var multiply = document.getElementById('multiply');
-var equal = document.getElementById('equal');
-var deleteN = document.getElementById('Delete');
+const calculadora = new Calculadora(textoValorInferior, textoValorSuperior)
 
 
+botonNumero.forEach(boton => {
+	boton.addEventListener('click', () => {
+		calculadora.agregarNumero(boton.innerText)
+		calculadora.imprimirDisplay()
+	})
+})
 
+botonBorrar.addEventListener('click', () => {
+	calculadora.borrar()
+	calculadora.imprimirDisplay()
+})
 
-cero.addEventListener("click", function(){
-    takeValue(0);
+botonOperador.forEach(boton => {
+	boton.addEventListener('click', () => {
+		calculadora.elegirOperacion(boton.innerText)
+		calculadora.imprimirDisplay()
+	})
 })
-one.addEventListener("click", function(){
-    takeValue(1);
+botonIgual.addEventListener('click', () => {
+	calculadora.realizarCalculo()
+	calculadora.imprimirDisplay()
 })
-two.addEventListener("click", function(){
-    takeValue(2);
-})
-three.addEventListener("click", function(){
-    takeValue(3);
-})
-four.addEventListener("click", function(){
-    takeValue(4);
-})
-five.addEventListener("click", function(){
-    takeValue(5);
-})
-six.addEventListener("click", function(){
-    takeValue(6);
-})
-seven.addEventListener("click", function(){
-    takeValue(7);
-})
-eight.addEventListener("click", function(){
-    takeValue(8);
-})
-nine.addEventListener("click", function(){
-    takeValue(9);
-})
-plus.addEventListener("click", function(){
-    takeValue("+");
-})
-minus.addEventListener("click", function(){
-    takeValue("-");
-})
-multiply.addEventListener("click", function(){
-    takeValue("*");
-})
-divide.addEventListener("click", function(){
-    takeValue("/");
+
+botonBorrarTodo.addEventListener('click', () => {
+	calculadora.limpiarPantalla()
+	calculadora.imprimirDisplay()
 })
 
 
-equal.addEventListener("click", function(){
-    calculateResult();
-})
-
-deleteN.addEventListener("click", function(){
-    clearInput()
-})

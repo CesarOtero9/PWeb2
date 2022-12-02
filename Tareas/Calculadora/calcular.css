@@ -13,6 +13,11 @@ body {
     }
 }
 
+@font-face {
+    font-family: fuenteCalculadora;
+    src: url(../Calculadora/Fonts/NewtonHowardFont.otf);
+}
+
 .twinkling {
     position: fixed;
     height: 100%;
@@ -25,7 +30,7 @@ body {
 h1 {
 
     font-size: 40px;
-    font-family: 'lust-display-didone', serif;
+    font-family: fuenteCalculadora;
 }
 
 h3 {
@@ -34,7 +39,7 @@ h3 {
     line-height: 32px;
     text-transform: uppercase;
     font-weight: 300;
-    font-family: 'futura-pt', serif;
+    font-family: fuenteCalculadora;
 }
 
 hr {
@@ -59,6 +64,8 @@ header {
     text-align: center;
     color: white;
     padding: 10px;
+    align-items: center;
+
 }
 
 /* --------------------------------------------
@@ -78,7 +85,6 @@ section{
 .calculator {
     height: 600px;
     width: 400px;
-    background-color: #838282;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
     display: flex;
     justify-content: center;
@@ -86,9 +92,12 @@ section{
     flex-direction: column;
     color: rgb(0, 0, 0);
     margin: 20px auto;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+    box-shadow: #30cfd0;
 }
 
-.result-bar {
+.resultBar {
     height: 150px; /* Aqui */
     width: 100%;
     display: flex;
@@ -97,11 +106,34 @@ section{
     padding: 0 1rem;
     box-sizing: border-box;
     overflow: hidden;
+    display: block;
 }
 
-.result-bar span {
-    font-size: 70px;
+
+.valorSuperior{
+    font-size: 40px;
+    color: white;
+    padding-top: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    height: 60px;
+    width: 100%;
+    text-align: right;
+    font-family: fuenteCalculadora;
 }
+
+.valorInferior{
+    font-size: 40px;
+    color: white;
+    margin-bottom: 30px;
+    width: 40px;
+    height: 60px;
+    width: 100%;
+    text-align: right;
+    font-family: fuenteCalculadora;
+}
+
+
 
 
 .controlls {
@@ -114,19 +146,19 @@ section{
 }
 
 
-input {
+button {
     font-size: 30px;
     color: black;
     border: none;
 }
 
-input:focus {
+button:focus {
     outline: none;
     border-color: #ffffff;
     ;
 }
 
-input:hover {
+button:hover {
     filter: brightness(130%);
 }
 
@@ -134,7 +166,7 @@ input:hover {
     background-color: #faf4f4;
 }
 
-.operator-out {
+.operatorOut {
     width: 100%;
     height: 60px;
     background-color: #faf4f4;

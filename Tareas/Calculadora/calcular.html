@@ -23,34 +23,36 @@
             y saca el factorial."
         </p>
     </header>
+
     <section>
         <div class="calculator">
-            <div class="result-bar">
-                <span id="Result"></span>
-            </div>
+            <div class="calculadora">
+                <div class="resultBar">
+                    <div class="valorSuperior" data-valor-superior></div>
+                    <div class="valorInferior" data-valor-inferior></div>
+                </div>
+                <button class="operatorOut" data-borrar-todo>C</button>
+                <div class="controlls">
 
-            <input class="operator-out" type="button" value="C" id="Delete">
-
-            <div class="controlls">
-                
-                <input class="number" type="button" value="7" id="seven">
-                <input class="number" type="button" value="8" id="eight">
-                <input class="number" type="button" value="9" id="nine">
-                <input class="operator" type="button" value="/" id="divide">
-                <input class="number" type="button" value="4" id="four">
-                <input class="number" type="button" value="5" id="five">
-                <input class="number" type="button" value="6" id="six">
-                <input class="operator" type="button" value="*" id="multiply">
-                <input class="number" type="button" value="1" id="one">
-                <input class="number" type="button" value="2" id="two">
-                <input class="number" type="button" value="3" id="three">
-                <input class="operator" type="button" value="-" id="minus">
-                <input class="result" type="button" value="=" id="equal">
-                <input class="number" type="button" value="0" id="cero">
-                <input class="number" type="button" value="." id="coma">
-                <input class="operator" type="button" value="+" id="plus">
-                <input class="operator" type="button" value="!" id="factorial" style="grid-column: 1/5;">
-
+                    <button data-numero>7</button>
+                    <button data-numero>8</button>
+                    <button data-numero>9</button>
+                    <button data-operador>+</button>
+                    <button data-numero>4</button>
+                    <button data-numero>5</button>
+                    <button data-numero>6</button>
+                    <button data-operador>-</button>
+                    <button data-numero>1</button>
+                    <button data-numero>2</button>
+                    <button data-numero>3</button>
+                    <button data-operador>*</button>
+                    <button data-numero>.</button>
+                    <button data-numero>0</button>
+                    <button data-operador>!</button>
+                    <button data-operador>÷</button>
+                    <button data-borrar>←</button>
+                    <button class="operator" data-igual style="grid-column: 2/5;">=</button>
+                </div>
             </div>
         </div>
     </section>
