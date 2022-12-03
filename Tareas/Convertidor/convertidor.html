@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertidor de Unidades</title>
+    <link rel="icon" href="../Calculadora/Images/Unidades.png">
+    <link rel="stylesheet" href="../Convertidor/convertidor.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header>
+        <div class="anim">
+            <div class="textos">
+                <div>
+                    <h1 class="titulo">Convertidor de Unidades</h1>
+                    <h3 class="subtitulo"></h3>
+                    <p> que pes bandaaaaa</p>
+                </div>
+            </div>
+        </div>
+        <div class="sesgoArriba">
+
+        </div>
+    </header>
+
+    <div>
+        <div class="convertidor">
+            <h4 class="tituloC">Distancias</h4>
+            <div class="fila">
+                <span>Convertir de</span>
+                <select id="tipoEntrada" class="tipo">
+                    <option value="metro">Metro</option>
+                    <option value="yarda">Yarda</option>
+                    <option value="pie">Pie</option>
+                    <option value="kilometro">Kilometro</option>
+                    <option value="centimetro">Centimetro</option>
+
+                </select>
+                <span>a</span>
+                <select id="tipoResultado" class="tipo1">
+                    <option value="metro">Metro</option>
+                    <option value="yarda">Yarda</option>
+                    <option value="pie">Pié</option>
+                    <option value="kilometro">Kilometro</option>
+                    <option value="centimetro">Centimetro</option>
+                </select>
+            </div>
+            <input type="number" placeholder="input" id="input">
+            <div class="resultado" id="resultado">
+                --
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../Convertidor/convertidor.js"></script>
+
+</body>
+
+</html>
