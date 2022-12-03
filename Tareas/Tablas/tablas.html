@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tablas</title>
+    <link rel="icon" href="../Calculadora/Images/iconoCalculadora.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+
+<body>
+    <script>
+        function Multiplicar(j) {
+            document.write("<h2> Tabla de multiplicar del " + j + "</h2>");
+            document.write("<ul>");
+            for (i = 1; i <= 10; i++) {
+                document.write("<li>");
+                document.write(j + "x " + i + "= " + j * i);
+                document.write("</li>");
+            }
+            document.write("</ul>");
+        }
+
+        var numDeTablas = parseInt(window.prompt("Numero de tablas"));
+        // el numero que se mete es el numero de tablas de la del 1 en adelante
+        for (k = 1; k <= numDeTablas; k = k + 1) {
+            document.write("<div>");
+            Multiplicar(k);
+            document.write("</div>");
+        }
+    </script>
+</body>
+
+</html>
